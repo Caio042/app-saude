@@ -39,6 +39,16 @@
                 android:text="Ganhar peso"
                 android:id="@+id/rdGanharPeso" />
         </RadioGroup>
+        <Button
+            android:text="Exibir dica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalorias" />
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/lblCaloriasResposta" />
     </LinearLayout>
-
 </LinearLayout>

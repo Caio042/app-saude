@@ -14,13 +14,19 @@
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite a quantidade de água que bebeu hoje"
+            android:hint="Bebeu quantos litros?"
             android:id="@+id/txtAgua" />
         <Button
             android:text="Bebi água o suficiente?"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnAgua" />
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/lblAgua" />
     </LinearLayout>
 
 </LinearLayout>

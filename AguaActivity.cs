@@ -15,6 +15,8 @@ namespace app_saude
     public class AguaActivity : Activity
     {
         EditText txtAgua;
+        Button btnAgua;
+        TextView lblAgua;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,6 +26,29 @@ namespace app_saude
             SetContentView(Resource.Layout.activity_agua);
 
             txtAgua = FindViewById<EditText>(Resource.Id.txtAgua);
+            btnAgua = FindViewById<Button>(Resource.Id.btnAgua);
+
+            lblAgua = FindViewById<TextView>(Resource.Id.lblAgua);
+
+            btnAgua.Click += BtnAgua_Click;
+        }
+
+        private void BtnAgua_Click(object sender, EventArgs e)
+        {
+            double agua = double.Parse(txtAgua.Text);
+
+            if (agua < 2)
+            {
+                lblAgua.Text = "Beba mais " + (2 - agua) + " litros de agua";
+            }
+            else if (agua < 3)
+            {
+                lblAgua.Text = "Parabéns, está hidratado";
+            }
+            else
+            {
+                lblAgua.Text = "Wow, vai com calma na hidratação ai";
+            }
         }
     }
 }
